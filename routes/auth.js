@@ -2,7 +2,12 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db");
 
-// SIMPLE LOGIN (Replace with Firebase OTP later)
+// ✅ ADD THIS (NEW)
+router.get("/test", (req, res) => {
+  res.send("Auth API Working ✅");
+});
+
+// EXISTING LOGIN (DON’T DELETE)
 router.post("/login", (req, res) => {
   const { phone } = req.body;
 
